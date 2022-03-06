@@ -1,3 +1,3 @@
 # goit-markup-hw-01
 
-HTML+CSS. Модуль 2. Д.з.
+HTML+CSS. Модуль 3. Д.з.
