@@ -24,7 +24,16 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.03em;
 }
-
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
 .conteiner {
   width: 1200px;
   margin: 0 auto;
@@ -86,8 +95,10 @@ body {
 
 .hero {
   background-color: var(--background-accent-color);
+  text-align: center;
 }
 .hero-title {
+  margin-bottom: 30px;
   color: var(--white-text-color--);
 
   font-weight: 900;
@@ -100,6 +111,11 @@ body {
 
 /* Sections */
 
+.section {
+  padding: 94px 0;
+
+  outline: 2px solid  green;
+}
 .section-title {
   color: var(--secondary-text-color--);
 
@@ -111,11 +127,12 @@ body {
 
 /* Specifics */
 
-.specifics-title {
-  visibility: hidden;
+.specifics-content.section {
+  padding-bottom: 0px;
 }
 .specifics-caption {
   color: var(--secondary-text-color--);
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 14px;
@@ -127,8 +144,17 @@ body {
   line-height: 1.7;
 }
 
+/* Features */
+
+.features-title {
+  margin-bottom: 50px;
+}
+
 /* Team */
 
+.team-title {
+  margin-bottom: 50px;
+}
 .team-content {
   background-color: var(--background-secondary-color);
 }
@@ -137,6 +163,7 @@ body {
 }
 .team-caption {
   color: var(--secondary-text-color--);
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -153,6 +180,10 @@ body {
 
 footer {
   background-color: var(--background-accent-color);
+}
+footer > .conteiner {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .address-list {
   font-style: normal;
@@ -178,8 +209,6 @@ footer {
 
 /* Portfolio */
 
-.works-titel {
-  visibility: hidden;
 }
 .works-caption {
   color: var(--secondary-text-color--);
@@ -198,7 +227,9 @@ footer {
 
 .hero-button,
 .works-button {
+  display: inline-block;
   font-family: inherit;
+  text-align: center;
   border: 0;
   border-radius: 4px;
 }
@@ -207,11 +238,13 @@ footer {
   background-color: var(--accent-color--);
   color: var(--white-text-color--);
   cursor: pointer;
+  min-width: 200px;
+  padding: 10px 32px;
+  margin-bottom: 200px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  text-align: center;
   letter-spacing: 0.06em;
 }
 .hero-button:hover,
@@ -223,11 +256,11 @@ footer {
   background-color: var(--background-secondary-color);
   color: var(--secondary-text-color--);
   cursor: pointer;
+  padding: 6px 22px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  text-align: center;
 }
 .works-button.current,
 .works-button:hover,
