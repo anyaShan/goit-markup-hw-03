@@ -12,13 +12,14 @@
   --black-text-color--: #000000;
   --accent-color--: #2196f3;
   --accent-color-secondary--: #188ce8;
-  --background-primary-color: #ffffff;
-  --background-accent-color: #2f303a;
-  --background-secondary-color: #f5f4fa;
+  --background-primary-color--: #ffffff;
+  --background-accent-color--: #2f303a;
+  --background-secondary-color--: #f5f4fa;
+  --border--: 1px solid #ececec;
 }
 
 body {
-  background-color: var(--background-primary-color);
+  background-color: var(--background-primary-color--);
   color: var(--primary-text-color--);
 
   font-family: 'Roboto', sans-serif;
@@ -33,15 +34,19 @@ p {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .conteiner {
   width: 1200px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 15px;
 
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 .link {
+  display: block;
   text-decoration: none;
 }
 .list {
@@ -69,15 +74,30 @@ img {
   color: var(--white-text-color--);
 }
 
-/* Header navigation */
+/* Conteiner Header */
 
 .header {
+  border: var(--border--);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.header-page {
+  display: flex;
+}
+/* Header navigation */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-nav-list {
+  display: flex;
+  margin-left: 93px;
+}
 .header-nav-list .link {
+  padding: 20px 0;
   color: var(--secondary-text-color--);
 }
 .header-nav-list .link.current,
@@ -85,18 +105,31 @@ img {
 .header-nav-list .link:focus {
   color: var(--accent-color--);
 }
+.header-nav-list > .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Header Contects */
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
 .header-contacts .link {
+  padding: 20px 0;
   color: var(--primary-text-color--);
 }
 .header-contacts a:hover,
 .header-contacts a:focus {
   color: var(--accent-color--);
 }
-
+.header-contacts > .item + .item {
+  margin-left: 50px;
+}
 /* Hero */
 
 .hero {
-  background-color: var(--background-accent-color);
+  background-color: var(--background-accent-color--);
   text-align: center;
 }
 .hero-title {
@@ -116,7 +149,7 @@ img {
 .section {
   padding: 94px 0;
 
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
 }
 .section-title {
   color: var(--secondary-text-color--);
@@ -158,10 +191,10 @@ img {
   margin-bottom: 50px;
 }
 .team-content {
-  background-color: var(--background-secondary-color);
+  background-color: var(--background-secondary-color--);
 }
 .team-item {
-  background-color: var(--background-primary-color);
+  background-color: var(--background-primary-color--);
 }
 .team-caption {
   color: var(--secondary-text-color--);
@@ -181,7 +214,7 @@ img {
 /* Footer */
 
 footer {
-  background-color: var(--background-accent-color);
+  background-color: var(--background-accent-color--);
 }
 footer > .conteiner {
   padding-top: 60px;
@@ -262,7 +295,7 @@ footer > .conteiner {
   color: var(--white-text-color--);
 }
 .works-button {
-  background-color: var(--background-secondary-color);
+  background-color: var(--background-secondary-color--);
   color: var(--secondary-text-color--);
   cursor: pointer;
   padding: 6px 22px;
