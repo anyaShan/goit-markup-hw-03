@@ -301,8 +301,7 @@ address {
 .works-list {
   display: flex;
   flex-wrap: wrap;
-  /* margin-bottom: -30px; */
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 .works-titel {
   display: none;
