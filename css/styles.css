@@ -165,6 +165,18 @@ img {
 .specifics-content.section {
   padding-bottom: 0px;
 }
+.specifics-title {
+  display: none;
+}
+.specifics-list {
+  display: flex;
+}
+.specifics-item {
+  max-width: 270px;
+}
+.specifics-item:not(:last-child) {
+  margin-right: 30px;
+}
 .specifics-caption {
   color: var(--secondary-text-color--);
   margin-bottom: 10px;
